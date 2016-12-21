@@ -52,7 +52,7 @@ public class BubbleSeekBar extends View {
 
     private int mMin; // 首值（起始值）
     private int mMax; // 尾值（结束值）
-    private float mProgress; // 实时值
+    private Double mProgress; // 实时值
     private int mTrackSize; // 下层track的高度
     private int mSecondTrackSize; // 上层track的高度
     private int mThumbRadius; // thumb的半径
@@ -614,7 +614,6 @@ public class BubbleSeekBar extends View {
         Bundle bundle = new Bundle();
         bundle.putParcelable("save_instance", super.onSaveInstanceState());
         bundle.putFloat("progress", mProgress);
-
         return bundle;
     }
 
@@ -629,7 +628,7 @@ public class BubbleSeekBar extends View {
 
             return;
         }
-
+        
         super.onRestoreInstanceState(state);
     }
 
